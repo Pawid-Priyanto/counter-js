@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+const notify = () => toast('Opps.. counter tidak boleh kurang dari 0');
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,8 +12,8 @@ function App() {
   }
 
   const minus = () => {
-    if(count == 0) {
-      alert('Opps.. counter tidak boleh kurang dari 0')
+    if(count === 0) {
+      notify()
     } else {
       setCount(count - 1)
     }
@@ -28,6 +31,20 @@ function App() {
         <button onClick={minus} style={{backgroundColor: 'green', borderRadius: 20, height: 40, width: 100}}>
           Kurang
         </button>
+        {/* <Toaster /> */}
+        <Toaster
+          toastOptions={{
+            duration: 2000,
+            style: {
+              border: '1px solid #713200',
+              padding: '16px',
+              color: 'red',
+            },
+            ariaLive: 'polite',
+            icon: '👏',
+
+          }}
+        />
         </div>
       </header>
       
