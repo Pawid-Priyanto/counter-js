@@ -1,0 +1,30 @@
+React Basic
+- JSX
+- State => inisialisasi data/object
+- Props => turunan dari State
+- component
+    - class component
+    - functional component
+- lifecycle
+    - class component
+        - componentDidmount
+        - componentWillMount
+        dll
+    - functional component
+        - react hook
+            - useState
+            - useEffect
+            - useReducer
+            - useContext
+- conditional rendering
+- high order component
+- Atomic design => membuat komponen sekecil/seminimalis/sedetail mungkin.
+- consume API
+- styling
+    - css
+    - styling component
+
+Advanced
+===========================
+- redux => management state
+===========================
